@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Jan/Desktop/Development/Server/spigot.jar"/>
-	<classpathentry kind="lib" path="/Users/Chris/Documents/Chris/Own Server/API/craftbukkit-1.8.8-R0.1-SNAPSHOT-latest.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Chris/Own Server/API/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
