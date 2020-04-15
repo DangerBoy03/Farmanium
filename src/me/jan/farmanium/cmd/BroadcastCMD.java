@@ -26,18 +26,18 @@ public class BroadcastCMD implements CommandExecutor {
 		}
 
 		if (args.length == 0) {
-			sender.sendMessage(Farmanium.prefix + "§c/bc <msg>");
+			sender.sendMessage(Farmanium.prefix + "Â§c/bc <msg>");
 			return true;
 		}
 
 		if (args[0].equalsIgnoreCase("player")) {
 			if (args.length <= 2) {
-				sender.sendMessage(Farmanium.prefix + "§c/bc Player <player> <msg>");
+				sender.sendMessage(Farmanium.prefix + "Â§c/bc Player <player> <msg>");
 				return true;
 			}
 			Player target = Bukkit.getPlayer(args[1]);
 			if (target == null) {
-				sender.sendMessage(Farmanium.prefix + "Der Spieler §e" + args[1] + " §7muss online sein");
+				sender.sendMessage(Farmanium.prefix + "Der Spieler Â§e" + args[1] + " Â§7muss online sein");
 				return true;
 			}
 			broadcast(target, args, 2);

@@ -40,7 +40,7 @@ public class GUIListener implements Listener {
 			}
 		} else if (e.getInventory().getTitle() == Farmanium.tpGUI) {
 			e.setCancelled(true);
-			if (cItem.isSimilar(HeadMain.getHead("la", "�cZur�ck"))) {
+			if (cItem.isSimilar(HeadMain.getHead("la", "§cZurück"))) {
 				if (GUI.getpage(GUI.tpinv) == 1) {
 					GUI.createMainGUI(p);
 					return;
@@ -49,7 +49,7 @@ public class GUIListener implements Listener {
 				page--;
 				GUI.newPageTpGUI(page);
 				return;
-			} else if (cItem.isSimilar(HeadMain.getHead("ra", "�cWeiter"))) {
+			} else if (cItem.isSimilar(HeadMain.getHead("ra", "§cWeiter"))) {
 				int page = GUI.getpage(GUI.tpinv);
 				page++;
 				GUI.newPageTpGUI(page);
@@ -64,7 +64,7 @@ public class GUIListener implements Listener {
 
 			Location loc = SetLocationCMD.buildlocation("loc." + name);
 			if (loc == null) {
-				p.sendMessage(Farmanium.prefix + "�cFehler! Location nicht gesetzt.");
+				p.sendMessage(Farmanium.prefix + "§cFehler! Location nicht gesetzt.");
 				return;
 			}
 
@@ -73,7 +73,7 @@ public class GUIListener implements Listener {
 
 		} else if (e.getInventory().getTitle() == Farmanium.perkGUI) {
 			e.setCancelled(true);
-			if (cItem.isSimilar(HeadMain.getHead("la", "�cZur�ck"))) {
+			if (cItem.isSimilar(HeadMain.getHead("la", "§cZurück"))) {
 				GUI.createMainGUI(p);
 				return;
 			} else if (cItem.isSimilar(ItemManager.on)) {
@@ -83,7 +83,7 @@ public class GUIListener implements Listener {
 			}
 		} else if (e.getInventory().getTitle() == Farmanium.questGUI) {
 			e.setCancelled(true);
-			if (cItem.isSimilar(HeadMain.getHead("la", "�cZur�ck"))) {
+			if (cItem.isSimilar(HeadMain.getHead("la", "§cZurück"))) {
 				GUI.createMainGUI(p);
 				return;
 			}

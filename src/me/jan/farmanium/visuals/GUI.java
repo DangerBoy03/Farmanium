@@ -39,7 +39,7 @@ public class GUI {
 	public static void createTPGUI(Player p) {
 
 		if (!Farmanium.loccfg.isConfigurationSection("loc")) {
-			p.sendMessage(Farmanium.prefix + "§cACHTUNG! Noch keine Location gesetzt! /loc");
+			p.sendMessage(Farmanium.prefix + "Â§cACHTUNG! Noch keine Location gesetzt! /loc");
 			return;
 		}
 
@@ -75,14 +75,14 @@ public class GUI {
 	public static void newPageTpGUI(int page) {
 		
 		fill(tpinv, tpstartfillonlast, 36, ItemManager.glass);
-		tpinv.setItem(49, HeadMain.getHead("rufzeichen", "§cSeite " + page));
+		tpinv.setItem(49, HeadMain.getHead("rufzeichen", "Â§cSeite " + page));
 		tpinv.getItem(49).setAmount(page);
 
 		int lenght;
 		
 		if(page != tppages) {	
 			lenght = 36;
-			tpinv.setItem(53, HeadMain.getHead("ra", "§cWeiter"));
+			tpinv.setItem(53, HeadMain.getHead("ra", "Â§cWeiter"));
 		}else {
 			tpinv.setItem(53, ItemManager.barrier);	
 			lenght = tploc.length-36*(page-1);	
@@ -133,10 +133,10 @@ public class GUI {
 	private static void normalpage(Inventory inv, int fill, boolean nextpage) {
 		fill(inv, fill, 36, ItemManager.glass);
 		fill(inv, 36, 45, ItemManager.greenglass);
-		inv.setItem(45, HeadMain.getHead("la", "§cZurück"));
-		inv.setItem(49, HeadMain.getHead("rufzeichen", "§cSeite 1"));
+		inv.setItem(45, HeadMain.getHead("la", "Â§cZurÃ¼ck"));
+		inv.setItem(49, HeadMain.getHead("rufzeichen", "Â§cSeite 1"));
 		if (nextpage) {
-			inv.setItem(53, HeadMain.getHead("ra", "§cWeiter"));
+			inv.setItem(53, HeadMain.getHead("ra", "Â§cWeiter"));
 			return;
 		}
 		inv.setItem(53, ItemManager.barrier);

@@ -33,12 +33,12 @@ public class ItemCMD implements CommandExecutor {
 				if (args.length >= 2) {
 
 					if (p.getItemInHand().getAmount() == 0) {
-						p.sendMessage(Farmanium.prefix + "§cHalte ein Item in der Hand");
+						p.sendMessage(Farmanium.prefix + "Â§cHalte ein Item in der Hand");
 						return true;
 					}
 
 					if (p.getItemInHand().equals(ItemManager.netherstar)) {
-						p.sendMessage(Farmanium.prefix + "§cDiese Item darf nicht verändert werden");
+						p.sendMessage(Farmanium.prefix + "Â§cDiese Item darf nicht verï¿½ndert werden");
 						return true;
 					}
 					
@@ -53,14 +53,14 @@ public class ItemCMD implements CommandExecutor {
 						}
 
 					}
-					args[1] = args[1].replace("&", "§");
+					args[1] = args[1].replace("&", "Â§");
 					if (args[0].equalsIgnoreCase("rename")) {
 						rename(p, args[1]);
 					} else if (args[0].equalsIgnoreCase("addlore")) {
 						addlore(p, args[1]);
 					}
 				} else {
-					p.sendMessage(Farmanium.prefix + "§c/item <addlore|removelore|rename> <string>");
+					p.sendMessage(Farmanium.prefix + "Â§c/item <addlore|removelore|rename> <string>");
 				}
 			}
 		}
@@ -72,12 +72,12 @@ public class ItemCMD implements CommandExecutor {
 		try {
 			ilore = Integer.parseInt(args);
 		} catch (NumberFormatException e) {
-			p.sendMessage(Farmanium.prefix + "§e" + args + " §7ist ungültig.");
+			p.sendMessage(Farmanium.prefix + "Â§e" + args + " Â§7ist ungÃ¼ltig.");
 			return;
 		}
 
 		if (ilore <= 0) {
-			p.sendMessage(Farmanium.prefix + "§e" + args + " §7ist zu klein");
+			p.sendMessage(Farmanium.prefix + "Â§e" + args + " Â§7ist zu klein");
 			return;
 		}
 
@@ -85,18 +85,18 @@ public class ItemCMD implements CommandExecutor {
 		ItemMeta im = is.getItemMeta();
 		ilore--;
 		if (im.getLore() == null) {
-			p.sendMessage(Farmanium.prefix + "§cDieses Item hat keine Lore");
+			p.sendMessage(Farmanium.prefix + "Â§cDieses Item hat keine Lore");
 			return;
 		}
 		lore = (ArrayList<String>) im.getLore();
 		if (ilore > lore.size()) {
-			p.sendMessage(Farmanium.prefix + "§cLore §e" + args + " §cexistier nicht");
+			p.sendMessage(Farmanium.prefix + "Â§cLore Â§e" + args + " Â§cexistier nicht");
 			return;
 		}
 		lore.remove(ilore);
 		im.setLore(lore);
 		is.setItemMeta(im);
-		p.sendMessage(Farmanium.prefix + "§aLore §e" + args + " §aerfolgreich geglöscht");
+		p.sendMessage(Farmanium.prefix + "Â§aLore Â§e" + args + " Â§aerfolgreich geglï¿½scht");
 	}
 
 	private static void rename(Player p, String args) {
@@ -104,7 +104,7 @@ public class ItemCMD implements CommandExecutor {
 		ItemMeta im = is.getItemMeta();
 		im.setDisplayName(args);
 		is.setItemMeta(im);
-		p.sendMessage(Farmanium.prefix + "§aItemname: §e" + args);
+		p.sendMessage(Farmanium.prefix + "Â§aItemname: Â§e" + args);
 	}
 
 	private static void addlore(Player p, String args) {
@@ -118,6 +118,6 @@ public class ItemCMD implements CommandExecutor {
 		}
 		im.setLore(lore);
 		is.setItemMeta(im);
-		p.sendMessage(Farmanium.prefix + "§aLore erfolgreich hinzugefügt.");
+		p.sendMessage(Farmanium.prefix + "ï¿½aLore erfolgreich hinzugefÃ¼gt.");
 	}
 }

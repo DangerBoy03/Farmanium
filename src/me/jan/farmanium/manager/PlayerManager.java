@@ -26,7 +26,7 @@ public class PlayerManager {
 		Farmanium.loadplayercfg();
 	}
 	private static void isnew(Player p) {
-		Bukkit.broadcastMessage(Farmanium.prefix + "งe" + p.getName() + " ง7ist neu!");
+		Bukkit.broadcastMessage(Farmanium.prefix + "ยงe" + p.getName() + " ยง7ist neu!");
 		p.getInventory().setItem(8, ItemManager.netherstar);
 		
 		UUID uuid = p.getUniqueId();

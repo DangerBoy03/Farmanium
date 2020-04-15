@@ -11,21 +11,21 @@ public class ItemManager {
 			painting, feather, greenglass, barrier, notbought, quest, off, on, bank, crafting, cosmetics, collection,
 			minigames;
 	static {
-		netherstar = new ItemBuilder(Material.NETHER_STAR).withName("§cFarmanium Menü").toItemStack();
+		netherstar = new ItemBuilder(Material.NETHER_STAR).withName("Â§cFarmanium MenÃ¼").toItemStack();
 		glass = new ItemBuilder(Material.STAINED_GLASS_PANE).withDurability((short) 7).withName(" ").toItemStack();
 		greenglass = new ItemBuilder(Material.STAINED_GLASS_PANE).withDurability((short) 5).withName(" ").toItemStack();
-		teleport = new ItemBuilder(Material.EYE_OF_ENDER).withName("§cTeleport-Menü").toItemStack();
-		feather = new ItemBuilder(Material.FEATHER).withName("§cPerks").toItemStack();
-		quest = new ItemBuilder(Material.QUARTZ_ORE).withName("§cQuest").toItemStack();
-		bank = new ItemBuilder(Material.GOLD_BLOCK).withName("§cBank").toItemStack();
-		crafting = new ItemBuilder(Material.WORKBENCH).withName("§cCrafting").toItemStack();
-		cosmetics = new ItemBuilder(Material.FIREWORK).withName("§cCosmetics").toItemStack();
-		collection = new ItemBuilder(Material.PAINTING).withName("§cCollection").toItemStack();
-		minigames = new ItemBuilder(Material.DIAMOND_BOOTS).withName("§cMinigames").toItemStack();
-		barrier = new ItemBuilder(Material.BARRIER).withName("§7[§cX§7]").toItemStack();
-		notbought = new ItemBuilder(Material.INK_SACK).withDurability((short) 8).withName("§cNicht gekauft")
+		teleport = new ItemBuilder(Material.EYE_OF_ENDER).withName("Â§cTeleport-MenÃ¼").toItemStack();
+		feather = new ItemBuilder(Material.FEATHER).withName("Â§cPerks").toItemStack();
+		quest = new ItemBuilder(Material.QUARTZ_ORE).withName("Â§cQuest").toItemStack();
+		bank = new ItemBuilder(Material.GOLD_BLOCK).withName("Â§cBank").toItemStack();
+		crafting = new ItemBuilder(Material.WORKBENCH).withName("Â§cCrafting").toItemStack();
+		cosmetics = new ItemBuilder(Material.FIREWORK).withName("Â§cCosmetics").toItemStack();
+		collection = new ItemBuilder(Material.PAINTING).withName("Â§cCollection").toItemStack();
+		minigames = new ItemBuilder(Material.DIAMOND_BOOTS).withName("Â§cMinigames").toItemStack();
+		barrier = new ItemBuilder(Material.BARRIER).withName("Â§7[Â§cXÂ§7]").toItemStack();
+		notbought = new ItemBuilder(Material.INK_SACK).withDurability((short) 8).withName("Â§cNicht gekauft")
 				.toItemStack();
-		off = new ItemBuilder(Material.INK_SACK).withDurability((short) 1).withName("§cDeaktiviert").toItemStack();
-		on = new ItemBuilder(Material.INK_SACK).withDurability((short) 10).withName("§aAktiviert").toItemStack();
+		off = new ItemBuilder(Material.INK_SACK).withDurability((short) 1).withName("Â§cDeaktiviert").toItemStack();
+		on = new ItemBuilder(Material.INK_SACK).withDurability((short) 10).withName("Â§aAktiviert").toItemStack();
 	}
 }

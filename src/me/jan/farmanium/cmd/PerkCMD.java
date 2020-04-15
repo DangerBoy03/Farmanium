@@ -29,11 +29,11 @@ public class PerkCMD implements CommandExecutor {
 				if (args.length == 2) {
 					Player target = Bukkit.getPlayer(args[1]);
 					if (!PlayerManager.playerexists(target)) {
-						p.sendMessage(Farmanium.prefix + "Der Spieler §e" + args[1] + " §7muss online sein");
+						p.sendMessage(Farmanium.prefix + "Der Spieler Â§e" + args[1] + " Â§7muss online sein");
 						return true;
 					}
 					if (!args[0].equalsIgnoreCase("list")) {
-						p.sendMessage(Farmanium.prefix + "§c/perks <set|reset|list> <player [<perk>]");
+						p.sendMessage(Farmanium.prefix + "Â§c/perks <set|reset|list> <player [<perk>]");
 						return true;
 					}
 					listperks(p, target);
@@ -59,10 +59,10 @@ public class PerkCMD implements CommandExecutor {
 							p.sendMessage(Farmanium.prefix + getperks());
 						}
 					} else {
-						p.sendMessage(Farmanium.prefix + "Der Spieler §e" + args[1] + " §7muss online sein");
+						p.sendMessage(Farmanium.prefix + "Der Spieler Â§e" + args[1] + " Â§7muss online sein");
 					}
 				} else {
-					p.sendMessage(Farmanium.prefix + "§c/perks <set|reset|list> <player [<perk>]");
+					p.sendMessage(Farmanium.prefix + "Â§c/perks <set|reset|list> <player [<perk>]");
 				}
 			} else {
 				p.sendMessage(Farmanium.prefix + Farmanium.noright);
@@ -73,11 +73,11 @@ public class PerkCMD implements CommandExecutor {
 
 	private static void setperk(Player p, Player target, Perk Perk) {
 		if(PlayerManager.playercfg.getBoolean(target.getUniqueId() + ".perk." + Perk.toString() + ".b")) {
-			p.sendMessage(Farmanium.prefix + "Der Spieler §e" + target.getName() + " §7hat dieses Perk bereits");
+			p.sendMessage(Farmanium.prefix + "Der Spieler Â§e" + target.getName() + " ï¿½7hat dieses Perk bereits");
 			return;
 		}
 		PlayerManager.playercfg.set(target.getUniqueId() + ".perk." + Perk.toString() + ".b", true);
-		p.sendMessage(Farmanium.prefix + "§aDer Spieler §e" + target.getName() + " §ahat das Perk erhalten");
+		p.sendMessage(Farmanium.prefix + "Â§aDer Spieler Â§e" + target.getName() + " ï¿½ahat das Perk erhalten");
 			
 	}
 	
@@ -87,20 +87,20 @@ public class PerkCMD implements CommandExecutor {
 			PlayerManager.playercfg.set(target.getUniqueId() + ".perk." + perk.toString() + ".s", setall);
 		}
 		if(setall) {
-			p.sendMessage(Farmanium.prefix + "§aDu hast §e" + target.getName() + " §aalle Perks gegeben");
+			p.sendMessage(Farmanium.prefix + "Â§aDu hast Â§e" + target.getName() + " Â§aalle Perks gegeben");
 			return;
 		}
-		p.sendMessage(Farmanium.prefix + "§cDu hast §e" + target.getName() + " §calle Perks entzogen");		
+		p.sendMessage(Farmanium.prefix + "Â§cDu hast Â§e" + target.getName() + " Â§calle Perks entzogen");		
 	}
 
 	private static void resetperk(Player p, Player target, Perk Perk) {
 		if(!PlayerManager.playercfg.getBoolean(target.getUniqueId() + ".perk." + Perk.toString() + ".b")) {
-			p.sendMessage(Farmanium.prefix + "§cDer Spieler §e" + target.getName() + " §chat dieses Perk nicht");
+			p.sendMessage(Farmanium.prefix + "Â§cDer Spieler Â§e" + target.getName() + " Â§chat dieses Perk nicht");
 			return;
 		}
 		PlayerManager.playercfg.set(target.getUniqueId() + ".perk." + Perk.toString() + ".b", false);
 		PlayerManager.playercfg.set(target.getUniqueId() + ".perk." + Perk.toString() + ".s", false);
-		p.sendMessage(Farmanium.prefix + "§cDu hast §e" + target.getName() + " §cdas Perk entzogen");
+		p.sendMessage(Farmanium.prefix + "Â§cDu hast Â§e" + target.getName() + " Â§cdas Perk entzogen");
 	}
 
 	private static void listperks(Player p, Player target) {

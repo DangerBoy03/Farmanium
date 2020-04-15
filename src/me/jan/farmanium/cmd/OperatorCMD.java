@@ -35,16 +35,16 @@ public class OperatorCMD implements CommandExecutor {
 
 						String opz = getops(p);
 						if (opz == "") {
-							p.sendMessage(Farmanium.prefix + "§cEs gibt keine Operatoren");
+							p.sendMessage(Farmanium.prefix + "Â§cEs gibt keine Operatoren");
 							return true;
 						}
 						opz = opz.substring(0, opz.length() - 2);
-						p.sendMessage(Farmanium.prefix + "Operatoren(§e" + getopamount() + "§7): " + opz);
+						p.sendMessage(Farmanium.prefix + "Operatoren(Â§e" + getopamount() + "Â§7): " + opz);
 					}
 				} else if (args.length == 2) {
 					Player target = Bukkit.getPlayer(args[1]);
 					if (target == null) {
-						p.sendMessage(Farmanium.prefix + "§e" + args[1] + " §7muss online sein.");
+						p.sendMessage(Farmanium.prefix + "Â§e" + args[1] + " Â§7muss online sein.");
 						return true;
 					}
 					if (args[0].equalsIgnoreCase("set")) {
@@ -53,7 +53,7 @@ public class OperatorCMD implements CommandExecutor {
 						resetops(p, target);
 					}
 				} else {
-					p.sendMessage(Farmanium.prefix + "§c/operator <set|reset|list> [<player>]");
+					p.sendMessage(Farmanium.prefix + "Â§c/operator <set|reset|list> [<player>]");
 				}
 			}
 		}
@@ -83,12 +83,12 @@ public class OperatorCMD implements CommandExecutor {
 
 	private static void setops(Player p, Player target) {
 		if (!PlayerManager.playerexists(target)) {
-			p.sendMessage(Farmanium.prefix + "§e" + target.getName() + " §7war noch nie hier");
+			p.sendMessage(Farmanium.prefix + "Â§e" + target.getName() + " Â§7war noch nie hier");
 			return;
 		}
 
 		if (PlayerManager.hasoperator(target)) {
-			p.sendMessage(Farmanium.prefix + "§e" + target.getName() + " §7ist bereits ein Operator");
+			p.sendMessage(Farmanium.prefix + "Â§e" + target.getName() + " Â§7ist bereits ein Operator");
 			return;
 		}
 		int ops = amount;
@@ -96,12 +96,12 @@ public class OperatorCMD implements CommandExecutor {
 		Farmanium.opcfg.set(String.valueOf(ops), target.getUniqueId().toString());
 		Farmanium.loadopcfg();
 		target.setOp(true);
-		p.sendMessage(Farmanium.prefix + "§e" + target.getName() + " §7ist nun ein Operator");
+		p.sendMessage(Farmanium.prefix + "Â§e" + target.getName() + " Â§7ist nun ein Operator");
 	}
 
 	private static void resetops(Player p, Player target) {
 		if (!PlayerManager.hasoperator(target)) {
-			p.sendMessage(Farmanium.prefix + "§e" + target.getName() + " §cist kein Operator gewesen");
+			p.sendMessage(Farmanium.prefix + "Â§e" + target.getName() + " Â§cist kein Operator gewesen");
 			return;
 		}
 		int x = 0;
@@ -118,7 +118,7 @@ public class OperatorCMD implements CommandExecutor {
 		Farmanium.loadopcfg();
 		target.setOp(false);
 		target.setGameMode(GameMode.ADVENTURE);
-		p.sendMessage(Farmanium.prefix + "§e" + target.getName() + " §cist nun kein Operator mehr");
+		p.sendMessage(Farmanium.prefix + "Â§e" + target.getName() + " Â§cist nun kein Operator mehr");
 	}
 
 	// '1': 96c365f3-5599-43c6-b5cc-a39cbf578186

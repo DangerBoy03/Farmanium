@@ -35,14 +35,14 @@ public class SetLocationCMD implements CommandExecutor {
 						ItemStack is = p.getItemInHand();
 
 						if (is.getAmount() == 0) {
-							p.sendMessage(Farmanium.prefix + "§cHalte ein Item in deiner Hand");
+							p.sendMessage(Farmanium.prefix + "Â§cHalte ein Item in deiner Hand");
 							return true;
 						}
 
 						String isd = is.getItemMeta().getDisplayName();
 
 						if (isd == null) {
-							p.sendMessage(Farmanium.prefix + "§cHalte ein Item mit Displayname in deiner Hand");
+							p.sendMessage(Farmanium.prefix + "Â§cHalte ein Item mit Displayname in deiner Hand");
 							return true;
 						}
 
@@ -51,14 +51,14 @@ public class SetLocationCMD implements CommandExecutor {
 						
 						setloc(p, "loc." + isd);
 					}else {
-						p.sendMessage(Farmanium.prefix + "§cMögliche Eingabe: List, Set");
+						p.sendMessage(Farmanium.prefix + "Â§cMÃ¶gliche Eingabe: List, Set");
 					}
 				} else if (args.length == 2) {
 
 					if (args[0].equalsIgnoreCase("reset")) {
 						resetloc(p, "loc." + args[1]);
 					}else {
-						p.sendMessage(Farmanium.prefix + "§cMögliche Eingabe: Reset");
+						p.sendMessage(Farmanium.prefix + "Â§cMÃ¶gliche Eingabe: Reset");
 					}
 				} else {
 					p.sendMessage(Farmanium.prefix + "/loc <set|list|reset> [<loc>]");
@@ -97,14 +97,14 @@ public class SetLocationCMD implements CommandExecutor {
 			
 			if(Farmanium.loccfg.getConfigurationSection("loc").getKeys(false).size() == 0) {
 				Farmanium.locfile.delete();
-				p.sendMessage(Farmanium.prefix + "§4GESAMTE LOC-DATEI GELÖSCHT");
+				p.sendMessage(Farmanium.prefix + "Â§4GESAMTE LOC-DATEI GELÃ–SCHT");
 				return;
 			}
 			
 			Farmanium.loadloccfg();
-			p.sendMessage(Farmanium.prefix + "§aLocation erfolgreich gelöscht");
+			p.sendMessage(Farmanium.prefix + "Â§aLocation erfolgreich gelÃ¶scht");
 		} else {
-			p.sendMessage(Farmanium.prefix + "§cLocation existiert nicht");
+			p.sendMessage(Farmanium.prefix + "Â§cLocation existiert nicht");
 		}
 	}
 
