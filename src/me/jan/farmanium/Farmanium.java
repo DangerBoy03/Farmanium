@@ -27,22 +27,22 @@ public class Farmanium extends JavaPlugin {
 
 	public static Location spawn = new Location(Bukkit.getWorld("world"), 0, 0, 0);
 
-	public static String prefix = "§3Farmanium §7» ";
+	public static String prefix = "Â§3Farmanium Â§7Â§ ";
 	
-	public static String noright = "§cDu hast diese Permisson nicht";
+	public static String noright = "Â§cDu hast diese Permisson nicht";
 	
-	public static String feldgesetztseperateline = "§7===================================";
-	public static String feldinfos = "§7Name: §6%feld%";
-	public static String worldfeldgesetzt = "§7Welt: §6%world%";
-	public static String xfeldgesetzt = "§7X: §6%x%";
-	public static String yfeldgesetzt = "§7Y: §6%y%";
-	public static String zfeldgesetzt = "§7Z: §6%z%";
-	public static String pitchfeldgesetzt = "§7Pitch: §6%pitch%";
-	public static String yawfeldgesetzt = "§7Yaw: §6%yaw%";
-	public static String mainGUI = "§2Farmanium Menü";
-	public static String tpGUI = "§cTeleport Menü";
-	public static String perkGUI = "§cPerk Menü";
-	public static String questGUI = "§cQuest Menü";
+	public static String feldgesetztseperateline = "Â§7===================================";
+	public static String feldinfos = "Â§7Name: Â§6%feld%";
+	public static String worldfeldgesetzt = "Â§7Welt: Â§6%world%";
+	public static String xfeldgesetzt = "Â§7X: Â§6%x%";
+	public static String yfeldgesetzt = "Â§7Y: Â§6%y%";
+	public static String zfeldgesetzt = "Â§7Z: Â§6%z%";
+	public static String pitchfeldgesetzt = "Â§7Pitch: Â§6%pitch%";
+	public static String yawfeldgesetzt = "Â§7Yaw: Â§6%yaw%";
+	public static String mainGUI = "Â§2Farmanium MenÂ§";
+	public static String tpGUI = "Â§cTeleport MenÂ§";
+	public static String perkGUI = "Â§cPerk MenÂ§";
+	public static String questGUI = "Â§cQuest MenÂ§";
 	
 	public static File locfile = new File("plugins/BetterFarmanium", "locations.yml");
 	public static FileConfiguration loccfg = YamlConfiguration.loadConfiguration(locfile);
