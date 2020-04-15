@@ -1,0 +1,24 @@
+name: Farmanium
+version: 0.0.1
+author: Jan
+description: For Farmanium PServer
+main: me.jan.farmanium.Farmanium
+commands:
+     location:
+          description: Regelt Locations
+          usage: </location>
+          aliases: [loc]
+     perks:
+          description: Regelt Perks
+          usage: </perks>
+          aliases: [perk]
+     operator:
+          description: Regelt OP
+          usage: </operator>
+     item:
+          description: Custom Items
+          usage: </item>
+     broadcast:
+          description: Sendet eine Nachrichten
+          usage: </broadcast>
+          aliases: [bc]
