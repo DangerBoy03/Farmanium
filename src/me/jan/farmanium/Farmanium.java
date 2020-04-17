@@ -39,10 +39,10 @@ public class Farmanium extends JavaPlugin {
 	public static String zfeldgesetzt = "§7Z: §6%z%";
 	public static String pitchfeldgesetzt = "§7Pitch: §6%pitch%";
 	public static String yawfeldgesetzt = "§7Yaw: §6%yaw%";
-	public static String mainGUI = "§2Farmanium Men§";
-	public static String tpGUI = "§cTeleport Men§";
-	public static String perkGUI = "§cPerk Men§";
-	public static String questGUI = "§cQuest Men§";
+	public static String mainGUI = "§2Farmanium Menü";
+	public static String tpGUI = "§cTeleport Menü";
+	public static String perkGUI = "§cPerk Menü";
+	public static String questGUI = "§cQuest Menü";
 	
 	public static File locfile = new File("plugins/BetterFarmanium", "locations.yml");
 	public static FileConfiguration loccfg = YamlConfiguration.loadConfiguration(locfile);
